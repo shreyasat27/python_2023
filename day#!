@@ -1,0 +1,47 @@
+#Q1Write a program to input a number and check whether it's positive negative or zero
+n = int(input("Enter a number: "))
+
+if n > 0:
+    print("Number is positive.")
+elif n < 0:
+    print("Number is negative.")
+else:
+    print("Number is zero.")
+
+#Q2WAP to input a number and check if it's odd or eve
+n = int(input("Enter a number: "))
+if n%2 == 0:
+    print("Number is even")
+else:
+    print("Number is odd")
+    
+#Q3WAP to input two numbers and find which one is  greater or are they equal
+
+n = int(input("Enter number 1: ")
+m = int(input("Enter number 2: ")
+
+if n == m:
+   print("Numbers are equal")
+elif n < m:
+   print("Number n is less than m")
+else: 
+   print("Numeber m is less than n")
+   
+#Q4WAP to print table of 2 using for loop
+
+for i in range(11):
+     result = 2*i
+     print(f"2*{i} = {result}")
+     
+#Q5WAP to input three numbers and find greatest using if elif
+n = int(input("Enter number 1: ")
+m = int(input("Enter number 2: ")
+o = int(input("Enter number 3: ")
+
+if n > m > o:
+   print("n is greatest")
+elif o > n > m:
+   print("o is greatest")
+else: 
+   print("m is greatest")
+----done for 25.5.23----
