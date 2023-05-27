@@ -1,0 +1,51 @@
+#Q6WAP to print table of 3 using while loop
+
+for i in range(20,0,-2):
+    result = 3*i
+    print(f"3*{i}= {result}")
+
+i=20
+while i>=2:
+   result= 3*i
+   print(f"3*{i}= {result}")
+   i-=2
+   
+#Q7WAP to print, if number is equal then print square of number. if number 1 is greater than 2 then print cube of first. else print sq root of 2nd.
+
+try:
+  n = int(input("Enter number 1 = "))
+  m = int(input("Enter number 2 = "))
+  if n == m:
+    print(m**2)
+  elif n > m:
+    print(n**3)
+  else:
+    print(m**(1/2))
+except Exception as e:
+   print("an error occurred!!!! sorrry brooo", e)
+   
+ #Q8WAP to print table of 2 ,3 and 4
+print("Table of 2 \t\t Table of 3\t\t Table of 4\t")
+
+for i in range(1,11):
+    result_2 = 2* i 
+    print(f"2*{i} = {result_2}",end =" \t\t")
+    result_3 = 3* i 
+    print(f"3*{i} = {result_3}",end =" \t\t")
+    result_4 = 4* i 
+    print(f"4*{i} = {result_4}")
+    
+#Q9WAP to print table from 1 to 10 using nested for loop
+n = 5 
+for n in range(1,11):
+    print(f"Table of {n}")
+    for i in range(1,11):
+      result = n*i
+      print(f"{n}*{i} = {result}")
+    print()
+    
+#Q10WAP to input a string and print all its character using for in loop
+
+string = str(input("Enter a string: "))
+for i in string:
+    print(i)
