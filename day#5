@@ -1,0 +1,92 @@
+#Q21 WAP to check if a number is Armstrong
+def is_armstrong(number):
+    # Convert the number to a string to iterate through its digits
+    num_str = str(number)
+    num_digits = len(num_str)
+
+    # Calculate the sum of the cubes of the digits
+    sum_cubes = sum(int(digit) ** num_digits for digit in num_str)
+
+    # Check if the sum of cubes is equal to the original number
+    if sum_cubes == number:
+        return True
+    else:
+        return False
+
+# Example usage
+number = int(input("Enter a number: "))
+
+if is_armstrong(number):
+    print(number, "is an Armstrong number")
+else:
+    print(number, "is not an Armstrong number")
+
+# i copied this whole without understanding or u can say i kinda okay i'll study this one on my own
+
+
+#Q22 WAP to print sum of number and its reverse?
+number = input("Enter a number: ")
+
+reverse_number = number[::-1] 
+sum_of_number = int(number) + int(reverse_number)
+
+print("Sum of the number and its reverse:", sum_of_number)
+
+
+
+#Q23 WAP to input two numbers and check if numbers are twin prime
+number1 = int(input("Enter a number 1: "))
+number2 = int(input("Enter a number 2: "))
+
+def is_prime(number):
+    if number < 2:
+        return False
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+def are_twin_primes(num1, num2):
+    if is_prime(num1) and is_prime(num2) and abs(num1 - num2) == 2:
+        return True
+    return False
+
+if are_twin_primes(number1, number2):
+    print(f"{number1} and {number2} are twin primes.")
+else:
+    print(f"{number1} and {number2} are not twin primes.")
+
+#needs to learn how u define a function
+
+
+#Q24 WAP to input time in 24 hour format and convert it into 12 hr without using date time module?
+#example
+#input 22:05:00
+#output 10:05:00PM
+
+def convert_to_12hr(time):
+    # Split the time into hours and minutes
+    hours, minutes = time.split(":")
+
+    # Convert the hours and minutes to integers
+    hours = int(hours)
+    minutes = int(minutes)
+
+    # Determine the meridiem (AM or PM)
+    meridiem = "AM" if hours < 12 else "PM"
+
+    # Convert hours to 12-hour format
+    if hours == 0:
+        hours = 12
+    elif hours > 12:
+        hours -= 12
+
+    # Create the formatted time string
+    formatted_time = f"{hours:02d}:{minutes:02d} {meridiem}"
+
+    return formatted_time
+
+# Example usage
+time_24hr = input("Enter the time in 24-hour format (HH:MM): ")
+time_12hr = convert_to_12hr(time_24hr)
+print("Time in 12-hour format:", time_12hr)
