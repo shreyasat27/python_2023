@@ -1,0 +1,58 @@
+#Q16 WAP to use while loop to print table of 8
+
+n = 1
+while n<=10:
+    solution = n * 8
+    print(f"{n} x 8 = {solution}")
+    n+=1 
+    
+#Q17 WAP to use while loop to print hello world 5 times
+
+n = 1
+while n<=5:
+    print("hello world")
+    n+=1
+    
+#Q18 WAP to use while loop to print characters of a string
+string = str(input("Enter a string:"))
+n = 0
+while n < len(string):
+    print(string[n])
+    n +=1
+    
+    
+#Q19 WAP to input n numbers using while loop and print the greatest one
+
+numbers = input("Enter numbers separated by spaces: ").split()
+numbers = [int(num) for num in numbers]
+
+greatest_number = numbers[0]
+i = 1
+while i < len(numbers):
+    if numbers[i] > greatest_number:
+        greatest_number = numbers[i]
+    i += 1
+
+print("The greatest number is:", greatest_number)
+
+#Q20 WAP to design a function which takes input principal rate and time and prints simple interest as well as compound interest
+
+principal = float(input("Enter the principal amount: "))
+rate = float(input("Enter the interest rate: "))
+time = float(input("Enter the time period: "))
+
+def calculate_interest(principal, rate, time):
+    # Simple Interest calculation
+    simple_interest = (principal * rate * time) / 100
+
+    # Compound Interest calculation
+    compound_interest = principal * ((1 + rate / 100) ** time - 1)
+
+    # Print the results
+    print("Simple Interest:", simple_interest)
+    print("Compound Interest:", compound_interest)
+
+
+
+calculate_interest(principal, rate, time)
+    
