@@ -52,3 +52,18 @@ try:
   print(reversed_string)
 except Exception as e:
    print("an error occurred!!!! sorrry brooo", e)
+   
+   
+ some extra tips and codes 
+ string = str(input("Enter a string: "))
+  w = ""
+  for i in string:
+      w = i+w
+      print(w)
+      
+  string = str(input("enter a string:"))
+  w =""
+  length =len(string)
+  for i in range(length-1,-1,-1):
+      w = w+string[i]
+      print(w)
