@@ -21,8 +21,18 @@ if is_armstrong(number):
 else:
     print(number, "is not an Armstrong number")
 
-# i copied this whole without understanding or u can say i kinda okay i'll study this one on my own
-
+#Q21(part 2 way) WAP to check if a number is Armstrong
+n=int(input("Enter a number"))
+num=n
+sum=0
+while num!=0:
+  d=num%10
+  num=int(num/10)
+  sum=sum+d**3
+if(sum==n):
+  print("armstrong")
+else:
+  print("not armstrong")
 
 #Q22 WAP to print sum of number and its reverse?
 number = input("Enter a number: ")
