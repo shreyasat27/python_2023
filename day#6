@@ -1,0 +1,59 @@
+#Q26 WAP to input a number and check if its perfect number 
+
+def is_perfect_number(n):
+    divisor_sum = sum([divisor for divisor in range(1, n) if n % divisor == 0])
+    return divisor_sum == n
+
+n = int(input("Enter a number: "))
+if is_perfect_number(n):
+    print(n, "is a perfect number.")
+else:
+    print(n, "is not a perfect number.")
+
+Q27 WAP to input a number and print it's reverse without converting into string
+number = int(input("Enter a number: "))
+#reverse_number = number[::-1] (why doesn't this work here????)
+reverse_n = 0
+
+while number > 0:
+    digit = number % 10
+    reverse_n = reverse_n * 10 + digit
+    number //= 10
+
+print("Reverse:", reverse_n)
+
+
+#Q 28 WAP to input a number and check if its a perfect square
+import math 
+number = int(input("Enter a number: "))
+sqrt =math.isqrt(number)
+
+if sqrt*sqrt == number:
+   print(f"{number} is a perfect square")
+else:
+   print(f"{number} is not a perfect square")
+
+#Q 29 WAP to declare a list and take it's size and elements and then print it
+
+size = int(input("Enter the size of the list: "))
+my_list = [] #empty list 
+
+print("Enter the elements of the list:")
+
+for _ in range(size):
+    element = int(input())
+    my_list.append(element) #adds the element into the list
+
+print("List:", my_list)
+
+#Q30 Draw a web interface which takes pet name and city where u live and using those characters generate a cool name
+
+pet_name = input("Write your prt name:")
+city_name =input("write your city name:")
+
+def generate_a_cool_name(pet_name,city_name):
+    cool_name = city_name[0] + pet_name[-1]+city_name[0] + pet_name[-1]
+    return cool_name
+   
+cool_name = generate_a_cool_name(pet_name, city_name)
+print("Cool Name:", cool_name)
