@@ -1,0 +1,52 @@
+STILL NEED TO WRITE CORRECT ANSWERS
+
+#Q1. WAP to print sum of square of digits in a given number
+
+number = int(input("Given Number:"))
+while number!= 0:
+    d1 = number%10 
+    new_number = number/10
+    
+#Q2.WAP to print string in order as mentioned below
+#Input:-HELLO
+#Output:-IFMMP
+#Increase every character
+
+ord("H")
+ord("H")+1 
+chr(72)+ chr(69)+chr(76)+ chr(76)+chr(79)
+
+
+#Q3. WAP to create a function which takes a number and print its factor
+
+number=int(input("Enter a number: "))
+for i in range(1,number+1):
+    if  number % i == 0:
+        print(i)
+        
+        
+Q#4.WAP to create a function which takes two number and print their common factors
+
+number_1 =int(input("Enter a number 1: "))
+number_2 = int(input("Enter a number 2: "))
+
+if number_1 > number_2:
+   for i in range(1,number_2+1):
+       if  number_1 % i == 0 and number_2 % i == 0:
+           print(i)
+
+
+if number_2 > number_1:
+   for n in range(1,number_1+1):
+       if  number_1 % n == 0 and number_2 % n == 0:
+           print(n)
+           
+           
+#Q5 WAP to print table from 10 to 20
+n = 10
+while n <=20:
+     print(f" Table of {n}") 
+     for i in range (1,11):
+         solution = n * i 
+         print(f" {n} x {i} = {solution}")
+     n+=1
