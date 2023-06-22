@@ -1,0 +1,29 @@
+#Q31 Design a function which takes two arguments and return its sum
+
+x = input("Write first argument: ")
+y = input("Write second argument : ")
+
+def sum(x,y):
+    x+y
+print(x+y)
+
+#Q32 Design a function which takes a and b print tables from a to b 
+
+a = int(input("Enter value for a: "))
+b = int(input("Enter value for b: "))
+
+
+for n in range(a,b+1):
+    print(f"Table of {n}")
+    for i in range(1,11):
+        result = n*i
+        print(f"{n}*{i} = {result}")
+    print()
+
+
+#Q33 Design a function which takes a string suppose a and returns its reverse
+
+enter_string = str(input("Enter a string: "))
+# to inverse the string
+reversed_string = enter_string[::-1]
+print(reversed_string)
